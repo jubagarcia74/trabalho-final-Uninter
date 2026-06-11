@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência de Dados ao Alcance dos Jovens</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#topo" class="navbar-brand"><span>//</span> CIÊNCIA DE DADOS AO ALCANCE DOS JOVENS</a>
+        <ul class="navbar-nav" id="navMenu">
+            <li><a href="#topo">Início</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#exercicios">Exercícios</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+        <button class="navbar-toggle" id="navToggle">&#9776;</button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+        <div class="hero-content">
+            <div class="hero-label">// Plataforma Educacional</div>
+            <h1>Ciência de Dados<br>ao Alcance dos <em>Jovens</em></h1>
+            <p>Aprenda a analisar dados reais da sua cidade. Tutoriais, exercícios práticos e dashboards interativos para estudantes do ensino fundamental e médio de Porto Alegre/RS.</p>
+            <div class="hero-buttons">
+                <a href="#aulas" class="btn btn-primary">Começar a Aprender</a>
+                <a href="#dashboard" class="btn btn-outline">Ver Dashboard</a>
+                <span class="hero-btn-divider"></span>
+                <a href="conteudo_educacional.pdf" download class="btn btn-outline" style="border-color: #a78bfa; color: #a78bfa;">&#128196; Baixar PDF</a>
+                <button class="btn btn-outline" onclick="abrirModalVideo()" style="border-color: #fb923c; color: #fb923c;">&#9654; Assistir Vídeo</button>
+                <a href="https://github.com/jubagarcia74" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: #94a3b8; color: #94a3b8;"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.03-.02-2.03-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg> Ver Fontes</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stats-title">// Porto Alegre em Números</div>
+            <div class="hero-stats-grid">
+                <div class="stat-row">
+                    <span class="stat-label">Matrículas Fund.</span>
+                    <span class="stat-value highlight">142.539</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Matrículas Médio</span>
+                    <span class="stat-value">48.721</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Escolas</span>
+                    <span class="stat-value">624</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Docentes</span>
+                    <span class="stat-value">10.974</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">IDEB Fund.</span>
+                    <span class="stat-value highlight">5.8</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Escolas c/ Internet</span>
+                    <span class="stat-value">94.4%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS GRID -->
+    <section class="section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-card-label">001 / Módulos</div>
+                <div class="stat-card-number">4</div>
+                <div class="stat-card-desc">Seções de aprendizado</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-label">002 / Tutoriais</div>
+                <div class="stat-card-number">12</div>
+                <div class="stat-card-desc">Aulas disponíveis</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-label">003 / Exercícios</div>
+                <div class="stat-card-number">8</div>
+                <div class="stat-card-desc">Atividades práticas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-label">004 / Dados</div>
+                <div class="stat-card-number">POA</div>
+                <div class="stat-card-desc">Dados reais de Porto Alegre</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1: AULAS E TUTORIAIS -->
+    <section class="section" id="aulas">
+        <div class="section-label">Módulo 01 / Aulas e Tutoriais</div>
+        <h2>Introdução à Ciência de Dados</h2>
+        <p class="section-desc">Aprenda os conceitos fundamentais de Ciência de Dados de forma simples e prática. Cada aula foi pensada para estudantes que estão tendo o primeiro contato com análise de dados.</p>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3>O que é Ciência de Dados?</h3>
+                <p>Entenda como os dados estão presentes no nosso dia a dia e como podemos usá-los para tomar decisões melhores. Desde redes sociais até previsão do tempo.</p>
+                <span class="card-tag tag-green">Iniciante</span>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔢</div>
+                <h3>Tipos de Dados</h3>
+                <p>Conheça a diferença entre dados numéricos, categóricos, textuais e temporais. Aprenda a identificar cada tipo no mundo real.</p>
+                <span class="card-tag tag-green">Iniciante</span>
+            </div>
+            <div class="card">
+                <div class="card-icon">📈</div>
+                <h3>Média, Mediana e Moda</h3>
+                <p>As três medidas mais importantes da estatística explicadas com exemplos do cotidiano: notas escolares, alturas dos colegas e preços do lanche.</p>
+                <span class="card-tag tag-green">Iniciante</span>
+            </div>
+            <div class="card">
+                <div class="card-icon">📉</div>
+                <h3>Gráficos e Visualizações</h3>
+                <p>Aprenda a criar e interpretar gráficos de barras, linhas e pizza. Descubra qual tipo de gráfico usar para cada situação.</p>
+                <span class="card-tag tag-blue">Intermediário</span>
+            </div>
+            <div class="card">
+                <div class="card-icon">🗂️</div>
+                <h3>Coletando Dados</h3>
+                <p>Como fazer uma pesquisa na sua escola: elaborar perguntas, coletar respostas e organizar os dados em tabelas para análise.</p>
+                <span class="card-tag tag-blue">Intermediário</span>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3>Tomando Decisões com Dados</h3>
+                <p>Veja como empresas, governos e escolas usam dados para tomar decisões. Aplique o mesmo raciocínio no seu dia a dia.</p>
+                <span class="card-tag tag-purple">Avançado</span>
+            </div>
+        </div>
+
+        <!-- Conteúdo expandido da primeira aula -->
+        <div class="tutorial-content" style="margin-top: 3rem;">
+            <h3>Aula 1: O que é Ciência de Dados?</h3>
+            <p>A Ciência de Dados é uma área do conhecimento que utiliza métodos científicos, processos e sistemas para extrair conhecimento e insights a partir de dados. Em termos simples, é a arte de transformar números e informações em decisões inteligentes.</p>
+            <p>Pense no seguinte: quando você abre o Instagram, o algoritmo decide quais posts mostrar primeiro. Quando o Spotify sugere uma música, ele analisa seus dados de escuta. Quando a previsão do tempo diz que vai chover, ela usa dados de satélites e sensores. Tudo isso é Ciência de Dados em ação.</p>
+            <p><strong>Onde encontramos dados no dia a dia?</strong></p>
+            <ul>
+                <li>Notas escolares (dados numéricos)</li>
+                <li>Pesquisas de opinião (dados categóricos)</li>
+                <li>Temperatura ao longo do dia (dados temporais)</li>
+                <li>Postagens em redes sociais (dados textuais)</li>
+                <li>Fotos e vídeos (dados multimídia)</li>
+            </ul>
+            <p><strong>As 5 etapas da Ciência de Dados:</strong></p>
+            <ol>
+                <li><strong>Perguntar</strong> — Definir qual problema queremos resolver</li>
+                <li><strong>Coletar</strong> — Reunir os dados necessários</li>
+                <li><strong>Limpar</strong> — Organizar e corrigir erros nos dados</li>
+                <li><strong>Analisar</strong> — Encontrar padrões e insights</li>
+                <li><strong>Comunicar</strong> — Apresentar os resultados de forma clara</li>
+            </ol>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Aula 2: Tipos de Dados</h3>
+            <p>Nem todos os dados são iguais. Para analisá-los corretamente, precisamos entender suas categorias:</p>
+            <p><strong>Dados Numéricos (Quantitativos)</strong></p>
+            <ul>
+                <li><strong>Discretos:</strong> valores inteiros que podem ser contados (número de alunos, gols em um jogo)</li>
+                <li><strong>Contínuos:</strong> valores que podem ter decimais (altura, peso, temperatura)</li>
+            </ul>
+            <p><strong>Dados Categóricos (Qualitativos)</strong></p>
+            <ul>
+                <li><strong>Nominais:</strong> categorias sem ordem (cor dos olhos, time de futebol)</li>
+                <li><strong>Ordinais:</strong> categorias com ordem (escolaridade, satisfação de 1 a 5)</li>
+            </ul>
+            <p><strong>Dados Temporais</strong></p>
+            <p>São dados associados a datas ou horários. Exemplos: temperatura ao longo do dia, evolução das notas no semestre, número de acessos ao site por hora.</p>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Aula 3: Média, Mediana e Moda</h3>
+            <p>Essas são as três medidas de tendência central mais usadas na estatística. Elas nos ajudam a resumir um conjunto de dados em um único número representativo.</p>
+            <p><strong>Média:</strong> soma de todos os valores dividida pela quantidade. Exemplo: notas 7, 8, 6, 9, 5. Média = (7+8+6+9+5)/5 = 7,0</p>
+            <p><strong>Mediana:</strong> valor do meio quando os dados estão em ordem. Exemplo: 5, 6, 7, 8, 9. Mediana = 7 (o valor central)</p>
+            <p><strong>Moda:</strong> valor que mais se repete. Exemplo: 7, 8, 7, 9, 7, 6. Moda = 7 (aparece 3 vezes)</p>
+            <p><strong>Quando usar cada uma?</strong></p>
+            <ul>
+                <li><strong>Média:</strong> quando os dados não têm valores muito extremos</li>
+                <li><strong>Mediana:</strong> quando há valores muito altos ou baixos que distorcem a média</li>
+                <li><strong>Moda:</strong> quando queremos saber o valor mais comum (ex: tamanho de camiseta mais vendido)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: EXERCÍCIOS PRÁTICOS -->
+    <section class="section" id="exercicios">
+        <div class="section-label">Módulo 02 / Exercícios Práticos</div>
+        <h2>Pratique com Dados Reais</h2>
+        <p class="section-desc">Exercícios interativos usando dados reais de Porto Alegre. Teste seus conhecimentos e aprenda fazendo.</p>
+
+        <!-- Exercício 1 -->
+        <div class="exercise-box">
+            <h4>// Exercício 01 — Calculando a Média</h4>
+            <p>Uma turma do 9º ano da Escola 3 de Outubro teve as seguintes notas em Matemática: <strong>7, 5, 8, 6, 9, 7, 8, 5, 7, 8</strong></p>
+            <p>Qual é a média da turma?</p>
+            <input type="text" class="exercise-input" id="ex1-input" placeholder="Digite sua resposta (ex: 7.5)">
+            <button class="btn btn-primary" onclick="checkAnswer('ex1', '7', 'A média é 7.0: (7+5+8+6+9+7+8+5+7+8) = 70 ÷ 10 = 7.0')">Verificar Resposta</button>
+            <div class="exercise-feedback" id="ex1-feedback"></div>
+        </div>
+
+        <!-- Exercício 2 -->
+        <div class="exercise-box">
+            <h4>// Exercício 02 — Identificando a Mediana</h4>
+            <p>Os tempos de deslocamento (em minutos) de 7 alunos até a escola são: <strong>15, 30, 10, 45, 20, 25, 35</strong></p>
+            <p>Qual é a mediana? (Dica: primeiro coloque em ordem crescente)</p>
+            <input type="text" class="exercise-input" id="ex2-input" placeholder="Digite sua resposta">
+            <button class="btn btn-primary" onclick="checkAnswer('ex2', '25', 'Em ordem: 10, 15, 20, 25, 30, 35, 45. O valor central (4º de 7) é 25.')">Verificar Resposta</button>
+            <div class="exercise-feedback" id="ex2-feedback"></div>
+        </div>
+
+        <!-- Exercício 3 -->
+        <div class="exercise-box">
+            <h4>// Exercício 03 — Encontrando a Moda</h4>
+            <p>Em uma pesquisa sobre o meio de transporte usado pelos alunos da Escola Padre Reus, os resultados foram: <strong>ônibus, ônibus, carro, bicicleta, ônibus, a pé, carro, ônibus, bicicleta, ônibus</strong></p>
+            <p>Qual é a moda (meio de transporte mais usado)?</p>
+            <input type="text" class="exercise-input" id="ex3-input" placeholder="Digite sua resposta">
+            <button class="btn btn-primary" onclick="checkAnswer('ex3', 'ônibus', 'Ônibus aparece 5 vezes, sendo o meio de transporte mais utilizado (moda).')">Verificar Resposta</button>
+            <div class="exercise-feedback" id="ex3-feedback"></div>
+        </div>
+
+        <!-- Exercício 4 -->
+        <div class="exercise-box">
+            <h4>// Exercício 04 — Interpretando Gráficos</h4>
+            <p>Porto Alegre tem 624 escolas no total. Dessas, 476 são de ensino fundamental e 148 de ensino médio. Qual a porcentagem aproximada de escolas de ensino fundamental?</p>
+            <input type="text" class="exercise-input" id="ex4-input" placeholder="Digite a porcentagem (ex: 75)">
+            <button class="btn btn-primary" onclick="checkAnswer('ex4', '76', 'Cálculo: 476 ÷ 624 × 100 = 76.3%. Aproximadamente 76% das escolas são de ensino fundamental.')">Verificar Resposta</button>
+            <div class="exercise-feedback" id="ex4-feedback"></div>
+        </div>
+
+        <!-- Exercício 5 -->
+        <div class="exercise-box">
+            <h4>// Exercício 05 — Análise de Dados</h4>
+            <p>O IDEB (Índice de Desenvolvimento da Educação Básica) de Porto Alegre nos anos iniciais é 5.8 e nos anos finais é 4.6. Qual é a diferença entre eles?</p>
+            <input type="text" class="exercise-input" id="ex5-input" placeholder="Digite sua resposta">
+            <button class="btn btn-primary" onclick="checkAnswer('ex5', '1.2', 'Diferença: 5.8 - 4.6 = 1.2 pontos. Isso indica que o desempenho cai nos anos finais do fundamental.')">Verificar Resposta</button>
+            <div class="exercise-feedback" id="ex5-feedback"></div>
+        </div>
+
+        <!-- Exercício 6 -->
+        <div class="exercise-box">
+            <h4>// Exercício 06 — Proporção e Porcentagem</h4>
+            <p>De 624 escolas em Porto Alegre, 589 possuem acesso à internet. Quantas escolas NÃO possuem internet?</p>
+            <input type="text" class="exercise-input" id="ex6-input" placeholder="Digite sua resposta">
+            <button class="btn btn-primary" onclick="checkAnswer('ex6', '35', 'Cálculo: 624 - 589 = 35 escolas sem acesso à internet.')">Verificar Resposta</button>
+            <div class="exercise-feedback" id="ex6-feedback"></div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: INTRODUÇÃO A PYTHON -->
+    <section class="section" id="python">
+        <div class="section-label">Módulo 03 / Introdução a Python</div>
+        <h2>Programação com Python</h2>
+        <p class="section-desc">Python é a linguagem mais usada em Ciência de Dados. Aprenda os conceitos básicos e veja como analisar dados com código.</p>
+
+        <div class="tutorial-content">
+            <h3>Por que Python?</h3>
+            <p>Python é a linguagem de programação mais popular para Ciência de Dados. Ela é usada por empresas como Google, Netflix, Spotify e Instagram. Suas principais vantagens são:</p>
+            <ul>
+                <li>Sintaxe simples e fácil de aprender (parece inglês)</li>
+                <li>Milhares de bibliotecas prontas para análise de dados</li>
+                <li>Comunidade enorme e muitos tutoriais gratuitos</li>
+                <li>Usada tanto por iniciantes quanto por profissionais</li>
+            </ul>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Seus Primeiros Comandos</h3>
+            <p>Vamos começar com os comandos mais básicos de Python:</p>
+
+            <div class="code-block">
+                <div class="code-block-header">// Python — Variáveis e Print</div>
+                <pre><span class="comment"># Criando variáveis</span>
+<span class="keyword">nome</span> = <span class="string">"Porto Alegre"</span>
+<span class="keyword">populacao</span> = <span class="number">1332570</span>
+<span class="keyword">idh</span> = <span class="number">0.805</span>
+
+<span class="comment"># Exibindo informações</span>
+<span class="function">print</span>(<span class="string">f"Cidade: {nome}"</span>)
+<span class="function">print</span>(<span class="string">f"População: {populacao} habitantes"</span>)
+<span class="function">print</span>(<span class="string">f"IDH: {idh}"</span>)</pre>
+            </div>
+
+            <div class="code-block">
+                <div class="code-block-header">// Python — Listas e Operações</div>
+                <pre><span class="comment"># Lista de notas de uma turma</span>
+<span class="keyword">notas</span> = [<span class="number">7</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">8</span>]
+
+<span class="comment"># Calculando estatísticas</span>
+<span class="keyword">media</span> = <span class="function">sum</span>(notas) / <span class="function">len</span>(notas)
+<span class="keyword">maior_nota</span> = <span class="function">max</span>(notas)
+<span class="keyword">menor_nota</span> = <span class="function">min</span>(notas)
+<span class="keyword">total_alunos</span> = <span class="function">len</span>(notas)
+
+<span class="function">print</span>(<span class="string">f"Média da turma: {media}"</span>)
+<span class="function">print</span>(<span class="string">f"Maior nota: {maior_nota}"</span>)
+<span class="function">print</span>(<span class="string">f"Menor nota: {menor_nota}"</span>)
+<span class="function">print</span>(<span class="string">f"Total de alunos: {total_alunos}"</span>)</pre>
+            </div>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Analisando Dados com Python</h3>
+            <p>Agora vamos usar Python para analisar dados reais de educação de Porto Alegre:</p>
+
+            <div class="code-block">
+                <div class="code-block-header">// Python — Análise de Dados Educacionais</div>
+                <pre><span class="comment"># Dados reais de Porto Alegre (IBGE/INEP 2023)</span>
+<span class="keyword">dados_educacao</span> = {
+    <span class="string">"matriculas_fundamental"</span>: <span class="number">142539</span>,
+    <span class="string">"matriculas_medio"</span>: <span class="number">48721</span>,
+    <span class="string">"docentes_fundamental"</span>: <span class="number">7790</span>,
+    <span class="string">"docentes_medio"</span>: <span class="number">3184</span>,
+    <span class="string">"escolas_total"</span>: <span class="number">624</span>,
+    <span class="string">"escolas_com_internet"</span>: <span class="number">589</span>,
+}
+
+<span class="comment"># Calculando indicadores</span>
+<span class="keyword">total_matriculas</span> = dados_educacao[<span class="string">"matriculas_fundamental"</span>] + dados_educacao[<span class="string">"matriculas_medio"</span>]
+<span class="keyword">total_docentes</span> = dados_educacao[<span class="string">"docentes_fundamental"</span>] + dados_educacao[<span class="string">"docentes_medio"</span>]
+<span class="keyword">alunos_por_professor</span> = total_matriculas / total_docentes
+<span class="keyword">pct_internet</span> = dados_educacao[<span class="string">"escolas_com_internet"</span>] / dados_educacao[<span class="string">"escolas_total"</span>] * <span class="number">100</span>
+
+<span class="function">print</span>(<span class="string">f"Total de matrículas: {total_matriculas:,}"</span>)
+<span class="function">print</span>(<span class="string">f"Alunos por professor: {alunos_por_professor:.1f}"</span>)
+<span class="function">print</span>(<span class="string">f"Escolas com internet: {pct_internet:.1f}%"</span>)</pre>
+            </div>
+
+            <div class="code-block">
+                <div class="code-block-header">// Python — Criando um Gráfico Simples</div>
+                <pre><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+
+<span class="comment"># Dados do IDEB de Porto Alegre ao longo dos anos</span>
+<span class="keyword">anos</span> = [<span class="number">2015</span>, <span class="number">2017</span>, <span class="number">2019</span>, <span class="number">2021</span>, <span class="number">2023</span>]
+<span class="keyword">ideb_iniciais</span> = [<span class="number">5.2</span>, <span class="number">5.4</span>, <span class="number">5.5</span>, <span class="number">5.6</span>, <span class="number">5.8</span>]
+<span class="keyword">ideb_finais</span> = [<span class="number">4.0</span>, <span class="number">4.1</span>, <span class="number">4.3</span>, <span class="number">4.4</span>, <span class="number">4.6</span>]
+
+<span class="comment"># Criando o gráfico</span>
+plt.<span class="function">figure</span>(figsize=(<span class="number">10</span>, <span class="number">6</span>))
+plt.<span class="function">plot</span>(anos, ideb_iniciais, <span class="string">'o-'</span>, label=<span class="string">'Anos Iniciais'</span>, color=<span class="string">'#00e68a'</span>)
+plt.<span class="function">plot</span>(anos, ideb_finais, <span class="string">'s-'</span>, label=<span class="string">'Anos Finais'</span>, color=<span class="string">'#00b8d4'</span>)
+plt.<span class="function">title</span>(<span class="string">'Evolução do IDEB em Porto Alegre'</span>)
+plt.<span class="function">xlabel</span>(<span class="string">'Ano'</span>)
+plt.<span class="function">ylabel</span>(<span class="string">'IDEB'</span>)
+plt.<span class="function">legend</span>()
+plt.<span class="function">grid</span>(<span class="keyword">True</span>, alpha=<span class="number">0.3</span>)
+plt.<span class="function">show</span>()</pre>
+            </div>
+        </div>
+
+        <div class="tutorial-content">
+            <h3>Estruturas de Decisão</h3>
+            <p>Em Python, usamos <code>if</code>, <code>elif</code> e <code>else</code> para tomar decisões baseadas em dados:</p>
+
+            <div class="code-block">
+                <div class="code-block-header">// Python — Classificando Desempenho</div>
+                <pre><span class="comment"># Classificar o IDEB de uma escola</span>
+<span class="keyword">def</span> <span class="function">classificar_ideb</span>(nota):
+    <span class="keyword">if</span> nota >= <span class="number">6.0</span>:
+        <span class="keyword">return</span> <span class="string">"Excelente"</span>
+    <span class="keyword">elif</span> nota >= <span class="number">5.0</span>:
+        <span class="keyword">return</span> <span class="string">"Bom"</span>
+    <span class="keyword">elif</span> nota >= <span class="number">4.0</span>:
+        <span class="keyword">return</span> <span class="string">"Regular"</span>
+    <span class="keyword">else</span>:
+        <span class="keyword">return</span> <span class="string">"Precisa melhorar"</span>
+
+<span class="comment"># Testando com dados de Porto Alegre</span>
+<span class="keyword">ideb_poa_iniciais</span> = <span class="number">5.8</span>
+<span class="keyword">ideb_poa_finais</span> = <span class="number">4.6</span>
+
+<span class="function">print</span>(<span class="string">f"Anos iniciais ({ideb_poa_iniciais}): {classificar_ideb(ideb_poa_iniciais)}"</span>)
+<span class="function">print</span>(<span class="string">f"Anos finais ({ideb_poa_finais}): {classificar_ideb(ideb_poa_finais)}"</span>)</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: DASHBOARD INTERATIVO -->
+    <section class="section" id="dashboard">
+        <div class="section-label">Módulo 04 / Dashboard Interativo</div>
+        <h2>Dados Educacionais de Porto Alegre</h2>
+        <p class="section-desc">Dashboard interativo com dados reais do IBGE e INEP sobre a educação em Porto Alegre/RS. Explore os gráficos e entenda a realidade educacional da cidade.</p>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-card-label">Matrículas</div>
+                <div class="stat-card-number">191K</div>
+                <div class="stat-card-desc">Total Fund. + Médio</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-label">Docentes</div>
+                <div class="stat-card-number">10.974</div>
+                <div class="stat-card-desc">Professores ativos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-label">Escolas</div>
+                <div class="stat-card-number">624</div>
+                <div class="stat-card-desc">Unidades escolares</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-label">Internet</div>
+                <div class="stat-card-number">94.4%</div>
+                <div class="stat-card-desc">Escolas conectadas</div>
+            </div>
+        </div>
+
+        <!-- Gráfico 1: Matrículas -->
+        <div class="chart-container">
+            <div class="chart-title">// Distribuição de Matrículas por Nível de Ensino</div>
+            <div class="chart-wrapper">
+                <canvas id="chartMatriculas"></canvas>
+            </div>
+        </div>
+
+        <!-- Gráficos lado a lado -->
+        <div class="charts-row">
+            <div class="chart-container">
+                <div class="chart-title">// Evolução do IDEB (2015-2023)</div>
+                <div class="chart-wrapper">
+                    <canvas id="chartIdeb"></canvas>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-title">// Infraestrutura das Escolas</div>
+                <div class="chart-wrapper">
+                    <canvas id="chartInfra"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico 3: Docentes -->
+        <div class="chart-container">
+            <div class="chart-title">// Relação Alunos por Professor</div>
+            <div class="chart-wrapper">
+                <canvas id="chartDocentes"></canvas>
+            </div>
+        </div>
+
+        <!-- Progress bars -->
+        <div class="chart-container">
+            <div class="chart-title">// Indicadores Educacionais de Porto Alegre</div>
+            <div class="progress-bar-container">
+                <div class="progress-label">
+                    <span>Taxa de Escolarização (6-14 anos)</span>
+                    <span>97.8%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill fill-green" style="width: 97.8%"></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">
+                    <span>Escolas com Acesso à Internet</span>
+                    <span>94.4%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill fill-blue" style="width: 94.4%"></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">
+                    <span>Jovens 15-17 no Ensino Médio</span>
+                    <span>89.2%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill fill-purple" style="width: 89.2%"></div>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-label">
+                    <span>Escolas com Laboratório de Informática</span>
+                    <span>50.0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill fill-yellow" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela -->
+        <div class="chart-container">
+            <div class="chart-title">// Dados Detalhados — Fonte: IBGE/INEP 2023</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Valor</th>
+                        <th>Fonte</th>
+                        <th>Ano</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>População total</td>
+                        <td>1.332.570</td>
+                        <td>IBGE Censo</td>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <td>Matrículas Ensino Fundamental</td>
+                        <td>142.539</td>
+                        <td>INEP</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>Matrículas Ensino Médio</td>
+                        <td>48.721</td>
+                        <td>INEP</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>Docentes Ensino Fundamental</td>
+                        <td>7.790</td>
+                        <td>INEP</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>Docentes Ensino Médio</td>
+                        <td>3.184</td>
+                        <td>INEP</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>IDEB Anos Iniciais</td>
+                        <td>5.8</td>
+                        <td>INEP</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>IDEB Anos Finais</td>
+                        <td>4.6</td>
+                        <td>INEP</td>
+                        <td>2023</td>
+                    </tr>
+                    <tr>
+                        <td>IDH Municipal</td>
+                        <td>0.805</td>
+                        <td>IBGE</td>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <td>PIB per capita</td>
+                        <td>R$ 52.867</td>
+                        <td>IBGE</td>
+                        <td>2022</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de Alfabetização</td>
+                        <td>97.8%</td>
+                        <td>IBGE Censo</td>
+                        <td>2022</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Ciência de Dados ao Alcance dos Jovens — Projeto de Atividade Extensionista II</p>
+        <p>Centro Universitário Internacional UNINTER — CST em Ciência de Dados</p>
+        <p>Juliano Freitas Garcia — RU: 2901883 — Porto Alegre/RS — 2026</p>
+        <p style="margin-top: 1rem;"><a href="https://github.com/jubagarcia74" target="_blank">GitHub</a></p>
+    </footer>
+
+    <!-- MODAL DE VÍDEO -->
+    <div id="modalVideo" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999; align-items:center; justify-content:center;">
+        <div style="position:relative; width:90%; max-width:860px; background:#0d1117; border:1px solid #30363d; border-radius:8px; overflow:hidden;">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #30363d;">
+                <span style="font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#8b949e;">// Vídeo de Apresentação</span>
+                <button onclick="fecharModalVideo()" style="background:none; border:none; color:#8b949e; font-size:1.4rem; cursor:pointer; line-height:1;" title="Fechar">&times;</button>
+            </div>
+            <video id="playerVideo" src="video/Video_Uninter.mp4" controls style="width:100%; display:block; max-height:75vh; background:#000;"></video>
+        </div>
+    </div>
+
+    <script>
+        function abrirModalVideo() {
+            const modal = document.getElementById('modalVideo');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('playerVideo').play();
+        }
+        function fecharModalVideo() {
+            const modal = document.getElementById('modalVideo');
+            const video = document.getElementById('playerVideo');
+            modal.style.display = 'none';
+            video.pause();
+            document.body.style.overflow = '';
+        }
+        document.getElementById('modalVideo').addEventListener('click', function(e) {
+            if (e.target === this) fecharModalVideo();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') fecharModalVideo();
+        });
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
